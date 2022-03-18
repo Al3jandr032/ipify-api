@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/rdegges/ipify-api",
+	"ImportPath": "github.com/Al3jandr032/ipify-api",
 	"GoVersion": "go1.8",
 	"GodepVersion": "v79",
 	"Deps": [

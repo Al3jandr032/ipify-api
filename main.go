@@ -9,7 +9,7 @@ package main
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"github.com/rdegges/ipify-api/api"
+	"github.com/Al3jandr032/ipify-api/api"
 	"github.com/rs/cors"
 	"log"
 	"net/http"
@@ -21,7 +21,8 @@ func main() {
 
 	// Setup all routes.  We only service API requests, so this is basic.
 	router := httprouter.New()
-	router.GET("/", api.GetIP)
+	router.GET("/ipify", api.GetIP)
+	router.GET("/api/health", api.HealthCheck)
 
 	// Setup 404 / 405 handlers.
 	router.NotFound = http.HandlerFunc(api.NotFound)
